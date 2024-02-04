@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <title>Все модальные окна</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../img/favicon//site.webmanifest">
+    <link rel="mask-icon" href="../../img/favicon/safari-pinned-tab.svg" color="#2f3c40">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+    <style>
+        .test-modals {}
+
+        .test-modals a {
+            display: table;
+            text-decoration: underline;
+        }
+
+        .test-modals h1 {
+            margin-bottom: 50px;
+        }
+
+        .test-modals a+a {
+            margin-top: 10px;
+        }
+
+        .test-modals a:hover {
+            text-decoration-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="site-wrapper inner-page">
+        <main class="main">
+            <section class="test-modals">
+                <h1 class="caption">Тестовые ссылки для открытия модалок:</h1>
+
+                <a href="#" data-modal="modal-card">Карточка</a>
+            </section>
+        </main>
+    </div>
+
+    <div class="micromodal-slide modal" id="modal-card" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true">
+                <div class="modal__inner">
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.22499 18.825L5.17499 17.775L10.95 12L5.17499 6.225L6.22499 5.175L12 10.95L17.775 5.175L18.825 6.225L13.05 12L18.825 17.775L17.775 18.825L12 13.05L6.22499 18.825Z"
+                                fill="#002246" />
+                        </svg>
+
+                    </button>
+                    <div class="modal__content" autocomplete="off">
+                        <div class="modal-custom">
+                            <div class="card-modal">
+                                <picture class='picture'>
+                                    <source type="image/webp" srcset="image.webp" />
+                                    <img src="image.jpg" alt="" />
+                                </picture>
+
+                                <div class="card-modal__content">
+                                    <span class="card-modal__name">Table top material</span>
+                                    <span class="card-modal__material">Wood</span>
+                                    <span class="card-modal__color">light beige</span>
+
+                                    <button class="card-modal__btn">Choose</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="../../libs/swiper/swiper-bundle.min.js"></script>
+    <script src="../../libs/selectric/jquery.selectric.min.js"></script>
+    <script src="../../libs/micromodal/micromodal.min.js"></script>
+    <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+    <script src="../../libs/fancybox/fancybox.umd.js"></script>
+    <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

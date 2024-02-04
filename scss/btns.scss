@@ -1,0 +1,30 @@
+.btn {
+  cursor: pointer;
+  font-family: $fontMain;
+  -webkit-appearance: none;
+  transition: all 0.3s;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  padding: 12px 19px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+  }
+
+  &--gray {
+    background-color: rgb(174, 162, 155);
+    border-color: rgb(174, 162, 155);
+    color: #fff;
+
+    &:hover {
+      background-color: #534c4b;
+      border-color: #534c4b;
+    }
+  }
+}

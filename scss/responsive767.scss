@@ -1,0 +1,101 @@
+@media (max-width: 767px) {
+  .header {
+    &__inner {
+      padding: 13px 0;
+    }
+  }
+
+  .logo {
+    width: 106px;
+  }
+
+  .greeting-section {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .footer__row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-menu {
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer {
+    .logo {
+      width: 140px;
+      margin: 0 auto;
+    }
+
+    .social {
+      margin-top: 16px;
+    }
+  }
+
+  .social {
+    gap: 16px;
+  }
+
+  .footer__col + .footer__col {
+    margin-top: 16px;
+  }
+
+  .footer__form {
+    flex-direction: column;
+
+    .input-item {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    padding: 24px 0;
+  }
+
+  .footer-top {
+    padding: 0;
+    padding-bottom: 16px;
+  }
+
+  .footer-bottom {
+    padding: 0;
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .copyRight {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: initial;
+  }
+
+  .developers {
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .developers__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .developers-fouro {
+    width: 65px;
+  }
+}
