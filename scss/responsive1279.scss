@@ -236,4 +236,145 @@
   .index-slider-catalog .swiper-wrapper {
     gap: 17px 20px;
   }
+
+  .header {
+    height: auto;
+  }
+
+  .header__inner {
+    padding: 16px 0;
+  }
+
+  .caption {
+    &--small {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .breadcrumbs {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .breadcrumbs-section {
+    padding: 10px 0;
+  }
+
+  .catalog-page {
+    padding: 16px 0;
+  }
+
+  .catalog-page .caption--small {
+    padding: 6px 16px;
+  }
+
+  .catalog-page .project-item .picture {
+    height: 265px;
+  }
+
+  .catalog-page .slider-catalog {
+    margin-top: 16px;
+  }
+
+  .catalog-item__controls {
+    margin-top: 16px;
+  }
+
+  .catalog-list {
+    margin-top: 16px;
+  }
+
+  .slider-catalog .swiper-controls {
+    top: -45px;
+  }
+
+  .site-wrapper:not(.index-page) .main {
+    padding-top: 48px;
+  }
+
+  .breadcrumbs-mobile {
+    display: flex;
+    gap: 4px;
+  }
+
+  .breadcrumbs-list {
+    display: none;
+  }
+
+  .slider-catalog .swiper-controls .swiper-button-prev,
+  .slider-catalog .swiper-controls .swiper-button-next {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 6px;
+      height: 12px;
+    }
+  }
+
+  .video-section .video-block {
+    height: 420px;
+  }
+
+  .card-right {
+    width: calc(50% - 112px);
+  }
+
+  .card-left {
+    width: calc(50% + 90px);
+  }
+
+  .card-descriptions {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+
+  .card-block__info {
+    margin-top: 70px;
+  }
+
+  .card-block__info table {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 16px;
+  }
+
+  .slider-big-slider .picture {
+    height: 352px;
+  }
+
+  .slider-small-slider {
+    margin-top: 5px;
+  }
+
+  .slider-small-slider .picture {
+    height: 90px;
+  }
+
+  .card-block .swiper-button-next,
+  .card-block .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 6px;
+      height: 12px;
+    }
+  }
+
+  .slider-small-slider__wrap .swiper-button-prev {
+    left: 0;
+    top: 35px;
+  }
+
+  .slider-small-slider__wrap .swiper-button-next {
+    right: 0;
+    top: 35px;
+  }
+
+  .card-block__info td {
+    padding: 14px 0;
+  }
 }

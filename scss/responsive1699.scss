@@ -10,4 +10,20 @@
   .index-slider-catalog .swiper-slide .project-item .picture {
     height: 200px;
   }
+
+  .project-item .picture {
+    height: 320px;
+  }
+
+  .video-section .video-block {
+    height: 610px;
+  }
+
+  .card-left {
+    width: calc(50% + 50px);
+  }
+
+  .card-right {
+    width: calc(50% - 75px);
+  }
 }

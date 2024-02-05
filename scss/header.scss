@@ -7,15 +7,13 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 32px 0;
-  }
-
-  &__text {
   }
 
   &__phone {
@@ -29,6 +27,43 @@
 
     &:hover {
       text-decoration-color: #fff;
+    }
+  }
+
+  &--fixed {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(64, 56, 55);
+    box-shadow: 0px 0px 10px #fff;
+
+    .header-mobile {
+    }
+
+    .header-mobile__phone {
+      svg {
+        path {
+          stroke: #333;
+        }
+      }
+    }
+
+    .burger-line {
+      background-color: #333;
+    }
+
+    .logo {
+      img {
+        display: none;
+      }
+
+      .logo--fixed {
+        display: block;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration-color: rgb(64, 56, 55);
+      }
     }
   }
 }

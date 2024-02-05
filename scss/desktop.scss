@@ -181,6 +181,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    filter: grayscale(1);
   }
 }
 
@@ -456,4 +457,302 @@
   width: 100%;
   height: 100%;
   z-index: 3;
+}
+
+.site-wrapper:not(.index-page) {
+  .main {
+    padding-top: 88px;
+  }
+
+  .header {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(64, 56, 55);
+    box-shadow: 0px 0px 10px #fff;
+
+    .header-mobile {
+    }
+
+    .header-mobile__phone {
+      svg {
+        path {
+          stroke: #333;
+        }
+      }
+    }
+
+    .burger-line {
+      background-color: #333;
+    }
+
+    .logo {
+      img {
+        display: none;
+      }
+
+      .logo--fixed {
+        display: block;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration-color: rgb(64, 56, 55);
+      }
+    }
+  }
+}
+
+.breadcrumbs-section {
+  padding: 24px 0;
+}
+
+.breadcrumbs {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+
+  a {
+    @include hoverDefaultLink(rgb(64, 56, 55));
+  }
+}
+
+.breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  li {
+    &:first-child {
+      .breadcrumbs-item::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.breadcrumbs-item {
+  position: relative;
+
+  @include before {
+    left: -20px;
+    top: 50%;
+    background-image: url(../img/svg/arrow-breadcrumbs.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.catalog-page {
+  padding: 60px 0 34px;
+
+  .caption--small {
+    background-color: rgb(174, 162, 155);
+    padding: 16px;
+    color: #fff;
+    text-transform: none;
+  }
+
+  .slider-catalog {
+    margin-top: 32px;
+  }
+}
+
+.catalog-list {
+  margin-top: 32px;
+}
+
+.catalog-item__sub {
+  .caption {
+    background-color: rgb(245, 244, 241);
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    text-transform: none;
+    margin-top: 32px;
+  }
+
+  .slider-catalog {
+    .swiper-controls {
+      .swiper-button-prev,
+      .swiper-button-next {
+        svg {
+          path {
+            stroke: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+.catalog-item {
+  overflow: hidden;
+  position: relative;
+
+  & + .catalog-item {
+    margin-top: 32px;
+  }
+
+  &__controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+}
+
+.slider-catalog {
+  overflow: visible;
+
+  .swiper-controls {
+    position: absolute;
+    right: 0;
+    top: -87px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 10px;
+        height: 20px;
+
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumbs-mobile {
+  display: none;
+}
+
+.video-section {
+  .video-block {
+    position: relative;
+    width: 100%;
+    height: 801px;
+  }
+}
+
+.card-section {
+  padding: 45px 0;
+}
+
+.card-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-left {
+  width: calc(50% + 118px);
+}
+
+.card-right {
+  width: calc(50% - 186px);
+
+  .caption--small {
+    text-transform: none;
+  }
+}
+
+.card-descriptions {
+  margin-top: 53px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.card-block__info {
+  margin-top: 74px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 25px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  td {
+    border: 1px solid rgba(64, 56, 55, 1);
+    padding: 18px 0;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+      padding-left: 24px;
+    }
+  }
+}
+
+.slider-big-slider {
+  .picture {
+    background-color: rgb(245, 244, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 555px;
+  }
+
+  img {
+    position: relative;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.slider-small-slider__wrap {
+  position: relative;
+
+  .swiper-button-next {
+    right: -50px;
+    left: auto;
+  }
+
+  .swiper-button-prev {
+    right: auto;
+    left: -50px;
+  }
+}
+
+.slider-small-slider {
+  margin-top: 24px;
+  width: 90%;
+
+  .swiper-slide {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+
+  .picture {
+    background-color: rgb(245, 244, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  }
+
+  img {
+    position: relative;
+    width: auto;
+    height: 100%;
+  }
 }

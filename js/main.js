@@ -74,6 +74,19 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".video__play").length > 0) {
+    $(".video__play").on("click", function () {
+      let self = $(this);
+
+      if ($(this).parents(".video-block").find("video").length > 0) {
+        let elem = $(this).parents(".video-block").find("video");
+        self.toggleClass("paused");
+        $(this).parents(".video-block").toggleClass("play");
+        self.hasClass("paused") ? elem.trigger("play") : elem.trigger("pause");
+      }
+    });
+  }
+
   if ($(".slider-projects").length > 0) {
     const sliders = document.querySelectorAll(".slider-projects");
     let mySwipers = [];
@@ -122,17 +135,48 @@ $(document).ready(function () {
     }
   }
 
-  $(".video__play").on("click", function () {
-    let self = $(this);
-    let parents = self.parents(".video-block");
+  if ($(".slider-catalog").length > 0) {
+    const sliders = document.querySelectorAll(".slider-catalog");
+    let mySwipers = [];
 
-    if ($(this).parents(".video-block").find("video").length > 0) {
-      let elem = $(this).parents(".video-block").find("video");
-      self.toggleClass("paused");
-      $(this).parents(".video-block").toggleClass("play");
-      self.hasClass("paused") ? elem.trigger("play") : elem.trigger("pause");
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        if (!slider.swiper) {
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1.25,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+              },
+
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
     }
-  });
+
+    sliders.length && sliderinit();
+  }
 });
 
 $(window).resize(function () {
@@ -168,8 +212,8 @@ $(window).on("load", function () {
 
   function init() {
     var myMap = new ymaps.Map("map", {
-      center: [55.75249, 37.623205],
-      zoom: 10,
+      center: [55.886521, 37.4368],
+      zoom: 15,
       controls: false,
     });
 
@@ -181,8 +225,8 @@ $(window).on("load", function () {
       {
         iconLayout: "default#image",
         iconImageHref: "../../img/svg/location.svg",
-        iconImageSize: [80, 80],
-        iconImageOffset: [-40, -40],
+        // iconImageSize: [40, 40],
+        // iconImageOffset: [-20, -20],
       }
     );
 

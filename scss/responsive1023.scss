@@ -62,4 +62,37 @@
   .index-slider-catalog .swiper-slide .project-item .picture {
     height: 180px !important;
   }
+
+  .header--fixed {
+    .menu {
+      box-shadow: 0px 0px 10px #fff;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .video-section .video-block {
+    height: auto;
+    padding-top: calc(64 / 320 * 100%);
+  }
+
+  .card-left {
+    width: 100%;
+  }
+
+  .card-right {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .card-block__info {
+    margin-top: 30px;
+  }
+
+  .slider-small-slider {
+    margin-top: 20px;
+  }
+
+  .slider-big-slider .picture {
+    height: 215px;
+  }
 }
