@@ -1,2 +1,13 @@
 .caption {
+  color: rgb(64, 56, 55);
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 80px;
+  text-transform: uppercase;
+
+  &--middle {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+  }
 }

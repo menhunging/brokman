@@ -1,2 +1,14 @@
 @media (max-width: 639px) {
+  .brand-section__list {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-section__item {
+    min-height: 208px;
+    padding: 32px 24px;
+  }
+
+  .brand-section__back {
+    padding: 32px 24px;
+  }
 }

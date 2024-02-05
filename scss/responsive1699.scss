@@ -1,2 +1,13 @@
 @media (max-width: 1699px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .index-slider-catalog .swiper-slide:nth-child(-n + 3) .project-item .picture {
+    height: 300px;
+  }
+
+  .index-slider-catalog .swiper-slide .project-item .picture {
+    height: 200px;
+  }
 }

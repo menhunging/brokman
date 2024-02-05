@@ -1,3 +1,9 @@
+@media (min-width: 1023px) {
+  .menu {
+    display: block !important;
+  }
+}
+
 @media (max-width: 1023px) {
   .header-mobile {
     display: flex;
@@ -24,5 +30,36 @@
   .footer__col:nth-child(3) {
     max-width: 375px;
     width: 100%;
+  }
+
+  .project-item .picture {
+    height: 210px;
+  }
+
+  .brand-section__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 16px;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .index-slider-catalog .swiper-wrapper {
+    gap: initial;
+    flex-wrap: wrap;
+  }
+
+  .index-slider-catalog .swiper-slide .project-item .picture {
+    height: 180px !important;
   }
 }

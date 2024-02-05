@@ -75,4 +75,165 @@
   .footer-menu {
     gap: 15px;
   }
+
+  .caption {
+    font-size: 36px;
+    line-height: 44px;
+
+    &--middle {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .contacts-info {
+    width: calc(50% - 30px);
+  }
+
+  .contacts-info li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts-info li .caption {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    padding: 0 0 8px 0;
+  }
+
+  .contacts-section {
+    .map-block {
+      height: 253px;
+    }
+  }
+
+  .contacts-section__content {
+    padding: 16px 0;
+  }
+
+  .contacts-section {
+    padding: 16px 0;
+  }
+
+  .squeeze-section {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 35px 0;
+
+    p {
+      max-width: 375px;
+    }
+
+    .btn {
+      max-width: 200px;
+    }
+  }
+
+  .squeeze-section__inner {
+    gap: 16px;
+  }
+
+  .project-item .picture {
+    height: 280px;
+  }
+
+  .project-item__link {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+
+  .swiper-controls {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 8px;
+        height: 16px;
+      }
+    }
+  }
+
+  .slider-projects {
+    margin-top: 16px;
+  }
+
+  .slider-projects .swiper-controls {
+    top: -54px;
+  }
+
+  .projects-section {
+    padding: 16px 0;
+  }
+
+  .brand-section__item {
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 213px;
+    padding: 24px 16px;
+  }
+
+  .brand-section__num {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  .brand-section__back {
+    padding: 24px 16px;
+  }
+
+  .brand-section__list {
+    margin-top: 16px;
+  }
+
+  .brand-section {
+    padding: 16px 0;
+  }
+
+  .our-production {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .our-production__inner {
+    gap: 13px;
+  }
+
+  .our-production .picture {
+    height: 165px;
+  }
+
+  .our-production .picture--long {
+    width: calc(50% + 49px);
+  }
+
+  .our-production .caption {
+    margin-bottom: 18px;
+  }
+
+  .our-production {
+    padding: 16px 0;
+  }
+
+  .index-slider-catalog .swiper-slide:nth-child(-n + 3) .project-item .picture {
+    height: 260px;
+  }
+
+  .index-slider-catalog .swiper-slide .project-item .picture {
+    height: 180px;
+  }
+
+  .index-catalog {
+    padding: 16px 0;
+  }
+
+  .index-slider-catalog {
+    margin-top: 16px;
+  }
+
+  .index-slider-catalog .swiper-wrapper {
+    gap: 17px 20px;
+  }
 }

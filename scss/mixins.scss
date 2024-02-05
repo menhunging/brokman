@@ -580,3 +580,13 @@
     transform: scale(1.25);
   }
 }
+
+@mixin hoverDefaultLink($color) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration 0.3s;
+
+  &:hover {
+    text-decoration-color: $color;
+  }
+}

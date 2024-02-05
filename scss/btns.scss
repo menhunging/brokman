@@ -27,4 +27,13 @@
       border-color: #534c4b;
     }
   }
+
+  &--black {
+    background-color: rgb(64, 56, 55);
+    color: #fff;
+
+    &:hover {
+      background-color: #4e4848;
+    }
+  }
 }

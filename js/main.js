@@ -1,3 +1,5 @@
+let observer = () => {};
+
 $(document).ready(function () {
   if ($(".burger").length > 0) {
     let menu = $(".menu");
@@ -72,71 +74,36 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".slider-catalog").length > 0) {
-    const sliders = document.querySelectorAll(".slider-catalog");
+  if ($(".slider-projects").length > 0) {
+    const sliders = document.querySelectorAll(".slider-projects");
     let mySwipers = [];
 
     function sliderinit() {
       sliders.forEach((slider, index) => {
         if (!slider.swiper) {
           mySwipers[index] = new Swiper(slider, {
-            slidesPerView: 4,
-            spaceBetween: 50,
+            slidesPerView: 2.4,
+            spaceBetween: 16,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             },
             breakpoints: {
               0: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                grid: {
-                  rows: 1,
-                  fill: "row",
-                },
-                spaceBetween: 10,
+                slidesPerView: 1.15,
+                spaceBetween: 18,
               },
-              390: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                grid: {
-                  rows: 2,
-                  fill: "row",
-                },
-                spaceBetween: 10,
-              },
-              640: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                grid: {
-                  rows: 2,
-                  fill: "row",
-                },
-                spaceBetween: 15,
+              480: {
+                slidesPerView: 1.75,
+                spaceBetween: 18,
               },
               768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                grid: {
-                  rows: 1,
-                  fill: "row",
-                },
+                slidesPerView: 2.5,
+                spaceBetween: 12,
               },
               1280: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                grid: {
-                  rows: 1,
-                  fill: "row",
-                },
-              },
-              1500: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-                grid: {
-                  rows: 1,
-                  fill: "row",
-                },
+                slidesPerView: 2.4,
+                spaceBetween: 16,
               },
             },
           });
@@ -147,6 +114,12 @@ $(document).ready(function () {
     }
 
     sliders.length && sliderinit();
+  }
+
+  if ($(".index-slider-catalog").length > 0) {
+    if ($(window).width() < 1024) {
+      initCatalogIndexPage();
+    }
   }
 
   $(".video__play").on("click", function () {
@@ -162,13 +135,58 @@ $(document).ready(function () {
   });
 });
 
-$(window).resize(function () {});
+$(window).resize(function () {
+  if ($(".index-slider-catalog").length > 0) {
+    if ($(window).width() < 1024) {
+      initCatalogIndexPage();
+    } else {
+      observer();
+    }
+  }
+});
 
 $(window).scroll(function () {
   if ($(window).scrollTop() > 0) {
     $(".header").addClass("header--fixed");
   } else {
     $(".header").removeClass("header--fixed");
+  }
+});
+
+$(window).on("load", function () {
+  if ($(".map-block").length > 0) {
+    setTimeout(() => ymapsLoad(), 500);
+    setTimeout(() => ymaps.ready(init), 1000);
+  }
+
+  function ymapsLoad() {
+    var script = document.createElement("script");
+    script.src =
+      "https://api-maps.yandex.ru/2.1/?apikey=0cec76e1-1847-46ed-a96a-c84c0917f2ad&lang=ru_RU";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [55.75249, 37.623205],
+      zoom: 10,
+      controls: false,
+    });
+
+    myMap.controls.remove("searchControl");
+
+    var myPlacemark = new ymaps.Placemark(
+      [55.886521, 37.4368],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "../../img/svg/location.svg",
+        iconImageSize: [80, 80],
+        iconImageOffset: [-40, -40],
+      }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
   }
 });
 
@@ -183,4 +201,48 @@ function openModal(modal) {
 function closeModal(modal) {
   MicroModal.close(modal);
   $("body").removeClass("modal-open");
+}
+
+function initCatalogIndexPage() {
+  if ($(".index-slider-catalog").hasClass("init")) return false;
+
+  $(".index-slider-catalog").addClass("init");
+
+  const swiper = new Swiper(".index-slider-catalog", {
+    slidesPerView: 2.4,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25,
+        spaceBetween: 16,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      640: {
+        slidesPerView: 2.5,
+        spaceBetween: 16,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+  });
+
+  let destroy = () => {
+    if ($(".index-slider-catalog").hasClass("init")) {
+      $(".index-slider-catalog").removeClass("init");
+
+      swiper.destroy(true, true);
+    }
+  };
+
+  observer = destroy;
 }

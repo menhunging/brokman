@@ -12,8 +12,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1650px;
-  padding: 0 10px;
+  max-width: 1520px;
   margin: 0 auto;
 }
 
@@ -483,9 +482,9 @@ picture {
 .swiper-controls {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 45px;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0;
   position: relative;
 
   .swiper-button-prev,
@@ -495,6 +494,11 @@ picture {
     right: auto;
     bottom: auto;
     left: auto;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
