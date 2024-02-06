@@ -26,4 +26,10 @@
   .card-right {
     width: calc(50% - 75px);
   }
+
+  .card-about__item {
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 405px;
+  }
 }

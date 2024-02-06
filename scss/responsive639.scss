@@ -15,4 +15,63 @@
   .catalog-page .project-item .picture {
     height: 211px;
   }
+
+  .card-about__item {
+    display: block;
+  }
+
+  .card-about__media {
+    .picture {
+      padding-top: calc(185 / 320 * 100%);
+      height: auto;
+    }
+  }
+
+  .card-about__content {
+    padding: 8px;
+  }
+
+  .card-about__item + .card-about__item {
+    margin-top: 8px;
+  }
+
+  .card-about {
+    padding: 16px 0;
+  }
+
+  .constructor-size {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .constructor-block__bottom {
+    margin-top: 20px;
+  }
+
+  .constructor-result {
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+
+    .price {
+      width: 30%;
+      white-space: nowrap;
+    }
+
+    .btn {
+      width: 60%;
+    }
+  }
+
+  .constructor-type__link {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25%;
+  }
 }

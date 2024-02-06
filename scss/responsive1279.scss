@@ -290,7 +290,11 @@
   }
 
   .site-wrapper:not(.index-page) .main {
-    padding-top: 48px;
+    padding-top: 50px;
+  }
+
+  .card-section {
+    padding-top: 20px;
   }
 
   .breadcrumbs-mobile {
@@ -376,5 +380,89 @@
 
   .card-block__info td {
     padding: 14px 0;
+  }
+
+  .card-about__item {
+    min-height: 285px;
+  }
+
+  .card-about__content .num {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  .card-about__content {
+    padding: 16px;
+  }
+
+  .card-about__content .caption {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  .card-about {
+    padding: 50px 0;
+  }
+
+  .constructor-block .title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .constructor-block__type li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .color-list {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .color-list .picture {
+    width: 65px;
+    height: 40px;
+  }
+
+  .constructor-block__right .col {
+    max-width: 95px;
+  }
+
+  .constructor-block__right .row {
+    gap: 30px;
+  }
+
+  .constructor-block__bottom,
+  .constructor-block__left {
+    width: calc(100% - 265px);
+  }
+
+  .constructor-block__picture {
+    width: 100%;
+    height: 390px;
+  }
+
+  .constructor {
+    padding: 25px 0;
+  }
+
+  .constructor-size label {
+    font-size: 16px;
+    line-height: 20px;
+    height: 32px;
+    padding: 5px 15px;
+  }
+
+  .constructor-size {
+    max-width: 300px;
+  }
+
+  .constructor-result .price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .constructor-block__bottom {
+    margin-top: 30px;
   }
 }

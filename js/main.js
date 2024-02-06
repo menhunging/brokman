@@ -75,7 +75,8 @@ $(document).ready(function () {
   }
 
   if ($(".video__play").length > 0) {
-    $(".video__play").on("click", function () {
+    $(".video__play").on("click", function (event) {
+      event.preventDefault();
       let self = $(this);
 
       if ($(this).parents(".video-block").find("video").length > 0) {
