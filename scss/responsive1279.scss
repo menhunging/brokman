@@ -465,4 +465,122 @@
   .constructor-block__bottom {
     margin-top: 30px;
   }
+
+  .production-about {
+    padding: 32px 0;
+  }
+
+  .production-about {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .production-about__row {
+    gap: 16px;
+  }
+
+  .production-about__text + .production-about__text {
+    margin-top: 12px;
+  }
+
+  .production-about__row + .production-about__row {
+    margin-top: 16px;
+  }
+
+  .production-about__text {
+    gap: 4px;
+  }
+
+  .production-caption {
+    padding: 8px 0;
+  }
+
+  .is-company__item {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 16px;
+    min-height: 192px;
+  }
+
+  .is-company__item .num {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .is-company__list {
+    margin-top: 17px;
+  }
+
+  .is-company {
+    padding: 32px 0;
+  }
+
+  .production-brand {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .production-brand__right {
+    gap: 16px;
+    max-width: 403px;
+  }
+
+  .production-brand__left {
+    gap: 16px;
+    max-width: 480px;
+  }
+
+  .production-brand {
+    padding: 32px 0;
+  }
+
+  .production-brand__left .picture {
+    padding-top: calc(300 / 450 * 100%);
+  }
+
+  .production-brand--white .production-brand__left .picture {
+    padding-top: calc(215 / 450 * 100%);
+  }
+
+  .modal__inner {
+    padding: 30px 16px;
+  }
+
+  .form-modal {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form-modal .caption {
+    padding: 8px 0;
+  }
+
+  .form-modal .form-modal__head {
+    margin-bottom: 20px;
+  }
+
+  .form-modal .input-item label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form-modal .input-item textarea,
+  .form-modal .input-item input {
+    height: 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form-modal .form-modal__desc {
+    margin-top: 20px;
+  }
+
+  .modal__close {
+    right: 20px;
+    top: 54px;
+  }
+
+  #modal-designer .modal__container {
+    max-width: 90%;
+  }
 }

@@ -1,2 +1,9 @@
 @media (max-width: 1499px) {
+  .production-brand__left {
+    width: calc(50% - 10px);
+  }
+
+  .production-brand__right {
+    width: calc(50% - 10px);
+  }
 }

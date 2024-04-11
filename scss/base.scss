@@ -358,9 +358,9 @@ input {
 
 .modal__close {
   @include transition(all 0.3s);
-  position: relative;
-  right: auto;
-  top: auto;
+  position: absolute;
+  right: 39px;
+  top: 63px;
   display: flex;
   z-index: 10;
   font-weight: 400;
@@ -408,14 +408,17 @@ input {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  padding: 32px;
-  @include border-radius(10px);
+  padding: 40px 32px;
   text-align: center;
 }
 
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: inherit;
+}
+
+.modal__overlay {
+  background-color: rgba(64, 56, 55, 0.4);
 }
 
 .selectric-open {

@@ -228,4 +228,71 @@
   .constructor-block__right .row {
     gap: 0;
   }
+
+  .production-about__row {
+    grid-template-columns: 1fr;
+  }
+
+  .production-about {
+    padding: 16px 0;
+  }
+
+  .production-about .picture {
+    padding-top: calc(165 / 350 * 100%);
+  }
+
+  .production-about__row:nth-child(2n) {
+    .production-about__content {
+      order: 1;
+    }
+
+    .picture {
+      order: 2;
+    }
+  }
+
+  .is-company__list {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .is-company__item {
+    justify-content: flex-start;
+    gap: 16px;
+    min-height: initial;
+
+    &.picture {
+      padding-top: calc(152 / 350 * 100%);
+    }
+  }
+
+  .production-brand {
+    padding: 16px 0;
+  }
+
+  .production-brand__left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .production-brand__right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .production-brand--white .production-brand__left .picture,
+  .production-brand__left .picture {
+    padding-top: calc(210 / 358 * 100%);
+  }
+
+  .production-brand__right {
+    flex-direction: column-reverse;
+    margin-top: 16px;
+
+    .picture {
+      padding-top: calc(210 / 358 * 100%);
+      flex: initial;
+    }
+  }
 }

@@ -74,4 +74,24 @@
     justify-content: center;
     padding: 15px 25%;
   }
+
+  .form-modal .input-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-modal .input-item:nth-child(4) {
+    grid-column: initial;
+  }
+
+  .form-modal .input-list {
+    margin-top: 20px;
+  }
+
+  .form-modal .caption {
+    max-width: 90%;
+  }
+
+  #modal-designer .modal__container {
+    max-width: 95%;
+  }
 }
